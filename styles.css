@@ -21,14 +21,14 @@ nav a:hover {
     padding-bottom: 50px;
 }
 
-#MainLogo {
+#mainLogo {
     background-color: #131618;
     display: block;
     margin: auto;
     margin-top: 100px;
 }
 
-#LandingText {
+#landingText {
     margin:auto;
     margin-top: 50px;    
 }
@@ -37,116 +37,129 @@ nav a:hover {
     text-align: center;
 }
 
-.PageTitle {
+.pageTitle {
     font-weight: 100;
     text-align: center;
     padding-top: 50px;
 }
 
-.AboutUs {
+.aboutUs {
     color: black;
     background-color: #e6e6e6;
 }
 
-#AboutUsPics {
+#aboutUsPics {
     margin-top: 50px;
     text-align: center;
     margin-bottom: 50px;
 }
 
-#AboutUsContent {
+#aboutUsContent {
     text-align: left;
     margin-top: -35px;
     padding-bottom: 50px;
 }
 
-#AboutUsContent h3 {
+#aboutUsContent h3 {
     margin-bottom: 35px;
     text-align: center;
 }
 
-#AboutUsContent ul {
+#aboutUsContent ul {
     margin-left: -40px;
     text-align: left;
 }
 
-#AboutUsContent a {
+#aboutUsContent a {
     color: black;
 }
 
-#AboutUsContent a:hover {
-    color: #00ffb0;
+#aboutUsContent a:hover {
+    color: #11bf88;
     text-decoration: none;
 }
 
-#BatterUpLogo {
+#batterUpLogo {
     width: 25%;
     display: block;
     margin: auto;
     margin-top: 100px;
 }
 
-#Trailers {
+#trailers {
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
-.Games h3 {
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.games h3 {
     margin-top: 25px;
     text-align: center;
     font-weight: 100;
 }
 
-.Games p {
-    margin-top: -75px;
-}
-
-.Games a {
+.games a {
     color: white;
     text-align: center;
 }
 
-.Games a:hover {
+.games a:hover {
     color: #00ffb0;
     text-decoration: none;
 }
 
-#Logo {
+.games p {
+    margin-top: -75px;
+}
+
+#logo {
     width: 50px;
     display: block;
     margin: auto;
     margin-top: 25px;
 }
 
-.Contact {
+.contact {
     color: black;
     background-color: #e6e6e6; 
     padding-top: 25px;
     margin-top: 25px;
 }
 
-.Contact h3 {
+.contact h3 {
     padding-top: 15px;
     margin-bottom: 15px;
     font-weight: 100;
 }
 
-#ContactLogo {
-    width: 10%;
-    margin: auto;
-    margin-top: -130px;
-    margin-left: 1060px;
-}
-
-.Contact #contactInfo {
+.contact #contactInfo {
     margin-top: -15px;
 }
 
-.Contact a {
+.contact a {
     color: black;
 }
 
-.Contact a:hover {
-    color: #00ffb0;
+.contact a:hover {
+    color: #11bf88;
     text-decoration: none;
+}
+
+@media (max-width: 1200px) { .contact h4 {
+    font-size: 12px;
+    } 
 }
