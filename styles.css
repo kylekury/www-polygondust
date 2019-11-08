@@ -79,6 +79,9 @@ nav a:hover {
     text-decoration: none;
 }
 
+#centreText {
+    text-align: center;
+}
 #OakwoodLogo {
     width: 50%;
     display: block;
