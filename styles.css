@@ -79,21 +79,54 @@ nav a:hover {
     text-decoration: none;
 }
 
-#centreText {
-    text-align: center;
+#OakwoodListText {
+    margin-top: -6%;
 }
+
 #OakwoodLogo {
-    width: 50%;
+    width: 75%;
     display: block;
     margin: auto;
     margin-top: 100px;
 }
 
 #batterUpLogo {
-    width: 25%;
+    width: 75%;
     display: block;
     margin: auto;
     margin-top: 100px;
+}
+
+#destructoDescription {
+    text-align: center;
+    margin-top: -10%;
+}
+
+#developmentHeader {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#h3Padding {
+    margin-top: 5%;
+}
+
+#destructoRaceLogo {
+    display: block;
+    margin: auto;
+    margin-top: -10%;
+}
+#destructoRaceImages {
+    width: 100%;
+    margin-top: 5%;
+}
+
+#destructoAlignRightText {
+    text-align: right;
+}
+
+#destructoAlignLeftText {
+    text-align: left;
 }
 
 #trailers {
