@@ -112,6 +112,7 @@ nav a:hover {
 }
 
 #destructoRaceLogo {
+    width: 100%;
     display: block;
     margin: auto;
     margin-top: -10%;
@@ -119,6 +120,11 @@ nav a:hover {
 #destructoRaceImages {
     width: 100%;
     margin-top: 5%;
+}
+
+.destructoBackgroundColour {
+    color: white;
+    background-color: #140d2b;
 }
 
 #destructoAlignRightText {
@@ -180,7 +186,6 @@ nav a:hover {
     color: black;
     background-color: #e6e6e6; 
     padding-top: 25px;
-    margin-top: 25px;
 }
 
 .contact h3 {
