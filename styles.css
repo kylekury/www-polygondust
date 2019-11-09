@@ -127,11 +127,20 @@ nav a:hover {
     background-color: #140d2b;
 }
 
+.destructoBackgroundAltColour {
+    color: white;
+    background-color: #2b1c5e;
+}
+
 #destructoAlignRightText {
     text-align: right;
 }
 
 #destructoAlignLeftText {
+    text-align: left;
+}
+
+#developmentUpdateList {
     text-align: left;
 }
 
