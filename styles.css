@@ -116,6 +116,11 @@ nav a:hover {
     margin-top: 5%;
 }
 
+#center {
+    text-align: center;
+    margin-top: 1%;
+}
+
 #destructoRaceLogo {
     width: 100%;
     display: block;
