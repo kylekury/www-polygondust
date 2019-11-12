@@ -90,6 +90,10 @@ nav a:hover {
     margin-top: 100px;
 }
 
+#oakwoodSocialIcons {
+    margin-bottom: 5%;   
+}
+
 #batterUpLogo {
     width: 75%;
     display: block;
@@ -105,10 +109,11 @@ nav a:hover {
 #developmentHeader {
     text-align: center;
     margin-top: 5%;
+    padding-top: 2.5%;
 }
 
 #h3Padding {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 #destructoRaceLogo {
@@ -120,6 +125,7 @@ nav a:hover {
 #destructoRaceImages {
     width: 100%;
     margin-top: 5%;
+    border: 3px solid white;
 }
 
 .destructoBackgroundColour {
