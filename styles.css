@@ -160,6 +160,27 @@ nav a:hover {
     margin-bottom: 100px;
 }
 
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Reference for dropdown symbols */
+/* https://www.htmlsymbols.xyz/unicode?page=23 */
+
+summary:before {
+    content: "\25B7";
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+/*
+summary:after {
+    content: "\25BD";
+    color: #ffffff;
+    margin-right: 5px;
+}
+*/
+
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
