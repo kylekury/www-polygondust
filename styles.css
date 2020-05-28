@@ -135,12 +135,7 @@ nav a:hover {
 
 .destructoBackgroundColour {
     color: white;
-    background-color: #140d2b;
-}
-
-.destructoBackgroundAltColour {
-    color: white;
-    background-color: #2b1c5e;
+    background-color: #46618d;
 }
 
 #destructoAlignRightText {
@@ -158,6 +153,10 @@ nav a:hover {
 #trailers {
     margin-top: 100px;
     margin-bottom: 100px;
+}
+
+summary {
+    margin-top: 25px;
 }
 
 summary::-webkit-details-marker {
