@@ -222,6 +222,13 @@ summary:after {
     margin-top: 25px;
 }
 
+#logo-bigger {
+    width: 75px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+}
+
 .contact {
     color: black;
     background-color: #e6e6e6; 
