@@ -132,6 +132,11 @@ nav a:hover {
     margin-top: 5%;
     border: 3px solid white;
 }
+#toastedEshop {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
 
 .destructoBackgroundColour {
     color: white;
