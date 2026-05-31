@@ -218,8 +218,9 @@ body {
         min-height: 220px;
     }
 
-    .game-slice:hover {
-        flex: 1.25;
+    .game-slice:hover,
+    .game-slice.touch-active {
+        flex: 6;
     }
 
     .game-title {
