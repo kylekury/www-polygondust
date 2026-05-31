@@ -184,6 +184,27 @@ body {
 
 /* ── Contact ── */
 
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.contact-label {
+    margin: 0 0 4px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    opacity: 0.6;
+}
+
+@media (min-width: 576px) {
+    .contact-links {
+        flex-direction: row;
+        gap: 60px;
+    }
+}
+
 .contact {
     color: white;
     background-color: #131618;
