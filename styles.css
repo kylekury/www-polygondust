@@ -86,6 +86,26 @@ body {
     background: rgba(255, 255, 255, 0.08);
 }
 
+/* Touch active state — mirrors hover for mobile */
+.game-slice.touch-active {
+    flex: 3;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 2;
+}
+
+.games-carousel:has(.touch-active) .game-overlay {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.game-slice.touch-active .game-overlay {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.game-slice.touch-active .game-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .game-title {
     position: absolute;
     bottom: 0;

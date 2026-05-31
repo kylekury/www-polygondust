@@ -106,5 +106,30 @@
             </div>
         </div>
 
+        <script>
+            (function () {
+                if (!('ontouchstart' in window) && navigator.maxTouchPoints === 0) return;
+
+                var slices = document.querySelectorAll('.game-slice');
+
+                slices.forEach(function (slice) {
+                    slice.addEventListener('click', function (e) {
+                        if (!this.classList.contains('touch-active')) {
+                            e.preventDefault();
+                            slices.forEach(function (s) { s.classList.remove('touch-active'); });
+                            this.classList.add('touch-active');
+                        }
+                        // already active — let the link through naturally
+                    });
+                });
+
+                // Tap outside the carousel collapses any active slice
+                document.addEventListener('click', function (e) {
+                    if (!e.target.closest('.game-slice')) {
+                        slices.forEach(function (s) { s.classList.remove('touch-active'); });
+                    }
+                });
+            })();
+        </script>
     </body>
 </html>
