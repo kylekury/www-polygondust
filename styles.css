@@ -1,57 +1,140 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #131618;
     color: white;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-nav {
-    background-color: #131618;
-    color: white;
-    font-weight: 100;
-}
-nav a {
-    color: white;
-    margin-right: 30px;
-}
-
-nav a:hover {
-    color: #00ffb0;
-}
-
-.landingPage {
-    padding-bottom: 50px;
-}
-
-#mainLogo {
-    background-color: #131618;
-    display: block;
-    margin: auto;
-    margin-top: 100px;
-}
-
-#landingText {
-    margin:auto;
-    margin-top: 50px;    
-}
+/* ── Landing ── */
 
 .landingPage {
     text-align: center;
+    padding: 80px 20px 60px;
+}
+
+#mainLogo {
+    display: block;
+    margin: auto;
+}
+
+#landingText {
+    margin: 40px auto 0;
+    max-width: 600px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+/* ── Games Carousel ── */
+
+.games-carousel {
+    display: flex;
+    width: 100%;
+    height: 65vh;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.game-slice {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    clip-path: polygon(12% 0%, 100% 0%, 88% 100%, 0% 100%);
+    transition: flex 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                clip-path 0.4s ease;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+}
+
+.game-slice:hover {
+    flex: 3;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 2;
+}
+
+.game-slice img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    pointer-events: none;
+}
+
+.game-overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    transition: background 0.35s ease;
+    pointer-events: none;
+}
+
+/* When any slice is hovered, dim all siblings */
+.games-carousel:hover .game-overlay {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* The active slice gets a subtle shine instead */
+.games-carousel:hover .game-slice:hover .game-overlay {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.game-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 16px 18px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    color: white;
+    font-weight: 100;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.game-slice:hover .game-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── About Us ── */
+
+.aboutUs {
+    color: black;
+    background-color: #e6e6e6;
+    padding-bottom: 50px;
 }
 
 .pageTitle {
     font-weight: 100;
     text-align: center;
     padding-top: 50px;
-}
-
-.aboutUs {
-    color: black;
-    background-color: #e6e6e6;
+    margin-bottom: 0;
 }
 
 #aboutUsPics {
     margin-top: 50px;
     text-align: center;
     margin-bottom: 50px;
+}
+
+#aboutUsPics img {
+    width: 100%;
+    max-width: 280px;
 }
 
 #aboutUsContent {
@@ -79,165 +162,13 @@ nav a:hover {
     text-decoration: none;
 }
 
-#OakwoodListText {
-    margin-top: -6%;
-}
-
-#OakwoodLogo {
-    width: 75%;
-    display: block;
-    margin: auto;
-    margin-top: 100px;
-}
-
-#oakwoodSocialIcons {
-    margin-bottom: 5%;   
-}
-
-#batterUpLogo {
-    width: 75%;
-    display: block;
-    margin: auto;
-    margin-top: 100px;
-}
-
-#destructoDescription {
-    text-align: center;
-    margin-top: -10%;
-}
-
-#developmentHeader {
-    text-align: center;
-    margin-top: 5%;
-    padding-top: 2.5%;
-}
-
-#h3Padding {
-    margin-top: 5%;
-}
-
-#center {
-    text-align: center;
-    margin-top: 1%;
-}
-
-#destructoRaceLogo {
-    width: 100%;
-    display: block;
-    margin: auto;
-    margin-top: -10%;
-}
-#destructoRaceImages {
-    width: 100%;
-    margin-top: 5%;
-    border: 3px solid white;
-}
-#toastedEshop {
-    width: 50%;
-    display: block;
-    margin: auto;
-}
-
-.destructoBackgroundColour {
-    color: white;
-    background-color: #46618d;
-}
-
-#destructoAlignRightText {
-    text-align: right;
-}
-
-#destructoAlignLeftText {
-    text-align: left;
-}
-
-#developmentUpdateList {
-    text-align: left;
-}
-
-#trailers {
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-summary {
-    margin-top: 25px;
-}
-
-summary::-webkit-details-marker {
-    display: none;
-}
-
-/* Reference for dropdown symbols */
-/* https://www.htmlsymbols.xyz/unicode?page=23 */
-
-summary:before {
-    content: "\25B7";
-    color: #ffffff;
-    margin-right: 5px;
-}
-
-/*
-summary:after {
-    content: "\25BD";
-    color: #ffffff;
-    margin-right: 5px;
-}
-*/
-
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-
-.videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.games h3 {
-    margin-top: 25px;
-    text-align: center;
-    font-weight: 100;
-}
-
-.games a {
-    color: white;
-    text-align: center;
-}
-
-.games a:hover {
-    color: #00ffb0;
-    text-decoration: none;
-}
-
-.games p {
-    margin-top: -75px;
-}
-
-#logo {
-    width: 50px;
-    display: block;
-    margin: auto;
-    margin-top: 25px;
-}
-
-#logo-bigger {
-    width: 75px;
-    display: block;
-    margin: auto;
-    margin-top: 25px;
-}
+/* ── Contact ── */
 
 .contact {
-    color: black;
-    background-color: #e6e6e6; 
+    color: white;
+    background-color: #131618;
     padding-top: 25px;
+    padding-bottom: 30px;
 }
 
 .contact h3 {
@@ -251,60 +182,40 @@ summary:after {
 }
 
 .contact a {
-    color: black;
+    color: white;
 }
 
 .contact a:hover {
-    color: #11bf88;
+    color: #00ffb0;
     text-decoration: none;
 }
 
-@media (max-width: 992px) { #landingText {
-    font-size: 24px;
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+    .games-carousel {
+        height: 50vh;
+        min-height: 220px;
     }
-}
 
-@media (max-width: 768px) { #landingText {
-    font-size: 18px;
+    .game-slice:hover {
+        flex: 1.25;
     }
-}
 
-@media (max-width: 992px) { .contact p {
-    font-size: 16px;
-    } 
-}
+    .game-title {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
 
-@media (max-width: 768px) { .contact p {
-    font-size: 18px;
-    } 
-}
+    #landingText {
+        font-size: 14px;
+    }
 
-@media (max-width: 992px) { p {
-    font-size: 24px;
-    } 
-}
+    .contact p {
+        font-size: 14px;
+    }
 
-@media (max-width: 768px) { p {
-    font-size: 18px;
-    } 
-}
-
-@media (max-width: 992px) { ul {
-    font-size: 24px;
-    } 
-}
-
-@media (max-width: 768px) { ul {
-    font-size: 18px;
-    } 
-}
-
-@media (max-width: 992px) { #batterUpLogo {
-    width: 80%;
-    } 
-}
-
-@media (max-width: 768px) { #batterUpLogo {
-    width: 80%;
-    } 
+    #aboutUsContent {
+        font-size: 14px;
+    }
 }
